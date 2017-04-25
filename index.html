@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>阴阳师悬赏查询</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+</head>
+<body>
+	<div id="main" class="kuang">
+		<div id="left">
+			<div class="kuang">
+				<input type="text" name="firstname" value="输入线索或者式神名字...">
+				<input type="submit" value="查找">
+			</div>
+			<div id="shishen_tabs">
+				<a href="javascript:void(0);" onclick="showme('ssr_div')">SSR</a>
+				<a href="javascript:void(0);" onclick="showme('sr_div')">SR</a>
+				<a href="javascript:void(0);" onclick="showme('r_div')">R</a>
+				<a href="javascript:void(0);" onclick="showme('n_div')">N</a>
+			</div>
+			<div id="ssr_div" class="kuang"></div>
+			<div id="sr_div" class="kuang"></div>
+			<div id="r_div" class="kuang"></div>
+			<div id="n_div" class="kuang"></div>
+		</div>
+		
+		
+		<div id="right">
+			查找结果
+		</div>
+
+	</div>
+
+
+</body>
+<script src="js\makeTable.js"></script>
+
+</html>
