@@ -1,27 +1,7 @@
 
-img{
-	width:100px;height:100px;
-} 
-
 a {
 	width:36px;
 	height:23px;
-}
-
-#left{
-	width:50%;
-	float:left;
-	/* border:solid;  */
-	margin-right:-3px;
-}
-	
-
-#right{
-	float:left;
-	width:49%;
-	margin-left:50%;
-	/* border:solid; */
-	margin-left:0px;
 }
 
 tr {
@@ -29,3 +9,22 @@ tr {
 	margin-left:10%;
 }
 
+#searchvalue{
+	margin-left:35%;
+}
+
+#right{
+	margin-top:5%;
+}
+
+.linka{
+	text-align:center;
+	margin-right:20%;
+	font-size:large
+}
+
+#shishen_tabs{
+	padding-left:20%;
+	margin-bottom:2%;
+	margin-top:2%
+}

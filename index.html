@@ -8,15 +8,15 @@
 <body>
 	<div id="main" class="kuang">
 		<div id="left">
-			<div class="kuang">
+			<div id="searchdiv">
 				<input type="text" id="searchvalue" value="输入线索或者式神名字...">
-				<input type="button" onclick="javascript:search()" value="查找">
+				<input type="button" id="searchbutton" onclick="javascript:search()" value="查找">
 			</div>
 			<div id="shishen_tabs">
-				<a href="javascript:void(0);" onclick="showme('ssr_div')">SSR</a>
-				<a href="javascript:void(0);" onclick="showme('sr_div')">SR</a>
-				<a href="javascript:void(0);" onclick="showme('r_div')">R</a>
-				<a href="javascript:void(0);" onclick="showme('n_div')">N</a>
+				<a href="javascript:void(0);" class="linka" onclick="showme('ssr_div')">SSR</a>
+				<a href="javascript:void(0);" class="linka" onclick="showme('sr_div')">SR</a>
+				<a href="javascript:void(0);" class="linka" onclick="showme('r_div')">R</a>
+				<a href="javascript:void(0);" class="linka" onclick="showme('n_div')">N</a>
 			</div>
 			<div id="ssr_div" class="kuang"></div>
 			<div id="sr_div" class="kuang"></div>

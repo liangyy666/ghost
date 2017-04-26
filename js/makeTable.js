@@ -17,39 +17,61 @@ var nameKey = {
 function main(){
 
 	var ssrTemp = new Array();	// 存放所ssr有单元格
+	var ssrNameTemp = new Array();
 	var srTemp = new Array();
+	var srNameTemp = new Array();
 	var rTemp = new Array();
+	var rNameTemp = new Array();
 	var nTemp = new Array();
+	var nNameTemp = new Array();
 	
 	for(var i=0; i<SSR_List.length; i++){
-		ssrTemp[ssrTemp.length] = creatTD("img\\ssr_img\\", SSR_List[i]);
+		ssrTemp[ssrTemp.length] = creatImgTD("img\\ssr_img\\", SSR_List[i]);
+		ssrNameTemp[ssrNameTemp.length] = creatNameTD(nameKey[SSR_List[i]]);
 	}
 	for(var i=0; i<SR_List.length; i++){
-		srTemp[srTemp.length] = creatTD("img\\sr_img\\", SR_List[i]);
+		srTemp[srTemp.length] = creatImgTD("img\\sr_img\\", SR_List[i]);
+		srNameTemp[srNameTemp.length] = creatNameTD(nameKey[SR_List[i]]);
 	}
 	for(var i=0; i<R_List.length; i++){
-		rTemp[rTemp.length] = creatTD("img\\r_img\\", R_List[i]);
+		rTemp[rTemp.length] = creatImgTD("img\\r_img\\", R_List[i]);
+		rNameTemp[rNameTemp.length] = creatNameTD(nameKey[R_List[i]]);
 	}
 	for(var i=0; i<N_List.length; i++){
-		nTemp[nTemp.length] = creatTD("img\\n_img\\", N_List[i]);
+		nTemp[nTemp.length] = creatImgTD("img\\n_img\\", N_List[i]);
+		nNameTemp[nNameTemp.length] = creatNameTD(nameKey[N_List[i]]);
 	}
 	
 	// 创建所有
-	creatTable("ssr_div", ssrTemp);
-	creatTable("sr_div", srTemp);
-	creatTable("r_div", rTemp);
-	creatTable("n_div", nTemp);
+	creatTable("ssr_div", ssrTemp, ssrNameTemp);
+	creatTable("sr_div", srTemp, srNameTemp);
+	creatTable("r_div", rTemp, rNameTemp);
+	creatTable("n_div", nTemp, nNameTemp);
 	
 	// 初始只显示SSR, 设置其他的隐藏
 	document.getElementById("sr_div").style.display="none";//隐藏
 	document.getElementById("r_div").style.display="none";//隐藏
 	document.getElementById("n_div").style.display="none";//隐藏
 	
+	// 设置图片宽度
 
 }
 
-// 创建单元格函数
-function creatTD(addr, name){
+// 创建文字单元格
+function creatNameTD(name){
+	var divT = document.createElement("div");
+	divT.innerHTML = name;
+	divT.style.cssText += 'text-align:center';
+	
+	var td = document.createElement("td");
+	td.appendChild(divT);
+	
+	return td;
+}
+
+
+// 创建图片单元格函数
+function creatImgTD(addr, name){
 	var aLink = document.createElement("a");
 	aLink.href = "javascript:void(0);";
 	aLink.className = "picLink" 
@@ -68,6 +90,10 @@ function creatTD(addr, name){
 	var img = document.createElement("img");
 	img.className = "pic";
 	img.src = addr + name + ".jpg"
+	img.onload = function(){
+		img.width = document.body.clientWidth/5;
+		img.height = document.body.clientWidth/5;
+	}
 	
 	aLink.appendChild(img);
 	
@@ -77,29 +103,29 @@ function creatTD(addr, name){
 	return td;
 }
 
-// 创建图片表格
-function creatTable(name, list){
+// 创建表格
+function creatTable(name, imgList, nameList){
 	var containDiv = document.getElementById(name);
-	var containTr = document.createElement("tr");	// 创建行
+	var containImgTr = document.createElement("tr");	// 创建图片行
+	var containNameTr = document.createElement("tr");	// 创建文字行
 	var sum = 1;
-	for(var i=0; i<list.length; i++){
-		containTr.appendChild(list[i]);
+	for(var i=0; i<imgList.length; i++){
+		containImgTr.appendChild(imgList[i]);
+		containNameTr.appendChild(nameList[i]);
 		sum++;
+		// document.body.clientWidth	// 网页可见区域宽度
 		if(sum%5 == 1){
-			containDiv.appendChild(containTr);
-			containTr = document.createElement("tr");
+			containDiv.appendChild(containImgTr);
+			containDiv.appendChild(containNameTr);
+			containImgTr = document.createElement("tr");
+			containNameTr = document.createElement("tr");
 			sum = 1;
 		}
 	}
-	containDiv.appendChild(containTr);
+	containDiv.appendChild(containImgTr);
+	containDiv.appendChild(containNameTr);
 
 }
-
-// 创建名字表格
-function creatName(){
-	
-}
-
 
 
 
