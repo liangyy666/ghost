@@ -9,7 +9,7 @@ var nameKey = {
 	"huiyeji":"辉夜姬", "huaniaojuan":"花鸟卷", "yimulian":"一目连", "huang":"慌", "qingxingdeng":"青行灯", "jiutuntongzi":"酒吞童子", "huangchuanzhizhu":"荒川之主", "cimutongzi":"茨木童子", "yaodaoji":"妖刀姬", "xiaolunan":"小鹿男", "liangmianfo":"两面佛", "yanmo":"阎魔", "datiangou":"大天狗",
 	"yijinzhentian":"以津真天", "jinyuji":"金鱼姬", "wannianzhu":"万年竹", "yanyanluo":"烟烟罗", "heitongzi":"黑童子", "bore":"般若", "guhuoniao":"姑获鸟", "yaoqinshi":"妖琴师", "guishihei":"鬼使黑", "guishibai":"鬼使白", "luoxinfu":"络新妇", "xuenv":"雪女", "bailang":"白狼", "xixueji":"吸血姬", "yaohu":"妖狐", "taohuayao":"桃花妖", "haifangzhu":"海坊主", "shimengmo":"食梦貘", "kuileishi":"傀儡师", "mengpo":"孟婆", "yinghuayao":"樱花妖", "panguan":"判官", "gunv":"骨女", "tiaotiaogege":"跳跳哥哥", "qingji":"青姬", "erkounv":"二口女", "fenghuanghuo":"凤凰火", "guinvhongye":"鬼女红叶", "huibishou":"惠比寿", "lianyou":"镰鼬", "quanshen":"犬神", "yecha":"夜叉", "qingfangzhu":"青坊主", "baitongzi":"白童子",
 	"gulonghuo":"古笼火", "yatiangou":"鸦天狗", "liyujing":"鲤鱼精", "jiaotu":"椒图", "tieshu":"铁鼠", "shouwu":"首无", "shifagui":"食发鬼", "shantu":"山兔", "qingwaciqi":"青蛙瓷器", "yingcao":"莹草", "tiaotiaomeimei":"跳跳妹妹", "guanhu":"管狐", "duyanxiaoseng":"独眼小僧", "sanweihu":"三尾狐", "bingyong":"兵俑", "zhuofutongzi":"座敷童子", "shantong":"山童", "limao":"狸猫", "hetong":"河童", "tongnan":"童男", "tongnv":"童女", "egui":"饿鬼", "wushizhiling":"武士之灵", "yunv":"雨女", "tiaotiaodidi":"跳跳弟弟", "wugushi":"巫蛊师", "choushizhinv":"丑时之女", "hudiejing":"蝴蝶精", "jue":"觉", "jiumingmao":"九命猫",
-	"tianxieguiqing":"天邪鬼青", "tianxieguichi":"天邪鬼赤", "tianxieguihuang":"天邪鬼黄", "tianxieguilv":"天邪鬼绿", "tangzhishanyao":"唐纸扇妖", "zhoushen":"帚神", "tubi":"涂壁", "tidengxiaoseng":"提灯小僧", "denglonggui":"灯笼鬼", "daomuxiaogui":"盗墓小鬼", "chishe":"赤舌", "jishenghun":"寄生魂"
+	"tianxieguiqing":"天邪鬼青", "tianxieguichi":"天邪鬼赤", "tianxieguihuang":"天邪鬼黄", "tianxieguilv":"天邪鬼绿", "tangzhishanyao":"唐纸伞妖", "zhoushen":"帚神", "tubi":"涂壁", "tidengxiaoseng":"提灯小僧", "denglonggui":"灯笼鬼", "daomuxiaogui":"盗墓小鬼", "chishe":"赤舌", "jishenghun":"寄生魂"
 }
 
 
@@ -53,9 +53,16 @@ function creatTD(addr, name){
 	var aLink = document.createElement("a");
 	aLink.href = "javascript:void(0);";
 	aLink.className = "picLink" 
+	// 图片的点击事件
 	aLink.onclick = function(){
 		var rightDiv = document.getElementById("right");
-		rightDiv.innerHTML = nameKey[name];
+		var listINFO = searchGhost(nameKey[name]);
+		var showinfo = "";
+		for(var i=0;i<listINFO.length;i++){
+			showinfo += listINFO[i];
+		}
+		rightDiv.innerHTML = showinfo;
+		// rightDiv.innerHTML = nameKey[name];
 	};
 	
 	var img = document.createElement("img");
@@ -107,4 +114,65 @@ function showme(name){
 	document.getElementById(name).style.display="block";
 }
 
+// 搜索按钮的查找函数
+function search(){
+	var searchvalue = document.getElementById("searchvalue").value;	// 获取用户输入值
+
+	// 不能确定用户输入的是线索还是式神名字，所以先从线索库里转换名字，
+	// changeName为保存名字和线索的键值对
+	for(var nameKey in changeName){
+		if(changeName[nameKey].indexOf(searchvalue)>=0){
+			searchvalue = nameKey;
+			break;
+		}
+	}
+	
+	var rightDiv = document.getElementById("right");
+	var listINFO = searchGhost(searchvalue);
+	var showinfo = "";
+	for(var i=0;i<listINFO.length;i++){
+		showinfo += listINFO[i];
+	}
+	rightDiv.innerHTML = showinfo;
+	
+}
+
+
+//------------------------ 右边显示部分  ----------------------------------------------------
+
+function searchGhost(name){
+
+	var listTemp = new Array();	// 存放找到的结果
+	for(var i=0; i<chapterList.length; i++){
+		var info = "";
+		// 查找某个章节
+		for(var j=0; j<chapterList[i].ghost.length; j++){
+			if(chapterList[i].ghost[j].indexOf(name)>0){
+				// info += chapterList[i].ghost[j] + "<br/>";
+				info += changeColor(name,chapterList[i].ghost[j]) + "<br/>";
+			}
+		}
+		// 结束某个章节的查找
+		if(info != ""){
+			info = chapterList[i].name + "<br/>" + info + "<br/>" + "<br/>";
+			listTemp[listTemp.length] = info
+		}
+	}
+	
+	return listTemp;
+}
+
+function changeColor(name, instring){
+	// "食发鬼2  丑时之女×2 食发鬼×1 兵俑×1"
+	// <span style="color:#ff0000;">298976731</span>
+	var loca = instring.lastIndexOf(name)
+	var tempStr = "";
+	tempStr = instring.substring(0,loca) + "<span style=\"color:#ff0000;\">" + instring.substring(loca,loca+name.length+3) + "</span>" + instring.substring(loca+name.length+3, instring.length);
+	return tempStr;
+	
+}
+
+
+
+//------------------------------------------------------------------------------------
 main();
