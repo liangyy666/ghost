@@ -10,8 +10,15 @@ tr {
 }
 
 #searchvalue{
-	margin-left:35%;
+	margin-left:20%;
+	height:10%;
+	width:40%;
 }
+#searchbutton{
+	height:10%;
+	width:15%;
+}
+
 
 #right{
 	margin-top:5%;
