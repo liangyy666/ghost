@@ -94,8 +94,8 @@ function creatImgTD(addr, name){
 	img.className = "pic";
 	img.src = addr + name + ".jpg"
 	img.onload = function(){
-		img.width = document.body.clientWidth/5;
-		img.height = document.body.clientWidth/5;
+		img.width = document.body.clientWidth/5 - document.body.clientWidth/100;
+		img.height = document.body.clientWidth/5 - document.body.clientWidth/100;
 	}
 	
 	aLink.appendChild(img);

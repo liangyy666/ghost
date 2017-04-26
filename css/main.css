@@ -9,6 +9,11 @@ tr {
 	margin-left:10%;
 }
 
+img {
+	margin:1px
+}
+
+
 #searchvalue{
 	margin-left:20%;
 	height:10%;
@@ -22,11 +27,13 @@ tr {
 
 #right{
 	margin-top:5%;
+	padding:2px;
+	font-size:large;
 }
 
 .linka{
 	text-align:center;
-	margin-right:20%;
+	margin-right:19%;
 	font-size:large
 }
 
