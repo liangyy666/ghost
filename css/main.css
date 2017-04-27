@@ -1,9 +1,4 @@
 
-a {
-	width:36px;
-	height:23px;
-}
-
 tr {
 	text-align:center;
 	margin-left:10%;
@@ -12,7 +7,10 @@ tr {
 img {
 	margin:1px
 }
-
+.label{
+	width:8%;
+	height:8%
+}
 
 #searchvalue{
 	margin-left:20%;
@@ -33,7 +31,7 @@ img {
 
 .linka{
 	text-align:center;
-	margin-right:19%;
+	margin-right:11%;
 	font-size:large
 }
 
