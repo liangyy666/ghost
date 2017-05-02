@@ -76,7 +76,8 @@ function creatNameTD(name){
 // 创建图片单元格函数
 function creatImgTD(addr, name){
 	var aLink = document.createElement("a");
-	aLink.href = "javascript:void(0);";
+	// aLink.href = "javascript:void(0);";
+	aLink.href = "#right";			// 跳转到查找结果
 	aLink.className = "picLink" 
 	// 图片的点击事件
 	aLink.onclick = function(){
@@ -86,8 +87,14 @@ function creatImgTD(addr, name){
 		for(var i=0;i<listINFO.length;i++){
 			showinfo += listINFO[i];
 		}
-		rightDiv.innerHTML = showinfo;
-		// rightDiv.innerHTML = nameKey[name];
+		if(showinfo == ""){
+			rightDiv.innerHTML = "没找到该式神";
+		}
+		else{
+			rightDiv.innerHTML = showinfo;
+		}
+			
+
 	};
 	
 	var img = document.createElement("img");
