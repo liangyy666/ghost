@@ -156,20 +156,25 @@ function search(){
 
 	// 不能确定用户输入的是线索还是式神名字，所以先从线索库里转换名字，
 	// changeName为保存名字和线索的键值对
+	var nameList = new Array();			// 所有可能的式神名字
 	for(var nameKey in changeName){
 		if(changeName[nameKey].indexOf(searchvalue)>=0){
-			searchvalue = nameKey;
-			break;
+			nameList[nameList.length] = nameKey;
 		}
 	}
 	
 	var rightDiv = document.getElementById("right");
-	var listINFO = searchGhost(searchvalue);
-	var showinfo = "";
-	for(var i=0;i<listINFO.length;i++){
-		showinfo += listINFO[i];
+	var showinfo = "搜索结果：<br/>";
+	for(var n=0;n<nameList.length;n++){
+		showinfo += "<span style=\"color:#ff0000;\">" + nameList[n] + "</span>"+ "<br/><br/>"
+		var listINFO = searchGhost(nameList[n]);
+		for(var i=0;i<listINFO.length;i++){
+			showinfo += listINFO[i];
+		}
 	}
+	
 	rightDiv.innerHTML = showinfo;
+	rightDiv.scrollIntoView();	// 转到显示结果
 	
 }
 

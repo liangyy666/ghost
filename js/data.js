@@ -254,6 +254,17 @@ var chapter21 = {
 			" 吸血姬2  跳跳弟弟×2 武士之灵×1;二回合 - 夜叉×1",
 			" 首领：萤草 吸血姬×1 烟烟罗×2 萤草×1;二回合 - 夜叉×1 烟烟罗×2 萤草×1"]
 }
+var chapter22 = {
+	name : "第二十二章 八岐大蛇的秘谋",
+	ghost : [	" 络新妇1	般若×1 烟烟罗×2 络新妇×1",
+				" 络新妇2	二口女×1 烟烟罗×2 络新妇×1",
+				" 络新妇3	二口女×3 络新妇×1",
+				" 二口女1	络新妇×3 烟烟罗×1",
+				" 二口女2	二口女×2 烟烟罗×2 ;回合二 - 青坊主×1",
+				" 青坊主1	二口女×2 烟烟罗×1 青坊主×1",
+				" 青坊主2	般若×3 青坊主×1",
+				" 首领：络新妇	二口女×2 般若×1 酒吞×1;二回合 - 惠比寿×1 吸血姬×1 椒图×1 络新妇×1"]
+}
 
 //-------------------- 御魂 1~10层 --------------------------------------------------------------------
 var yuhun1 = {
@@ -459,7 +470,7 @@ var changeName = {
 
 
 // 存放所有章节
-var chapterList = [chapter1,chapter2,chapter3,chapter4,chapter5,chapter6,chapter7,chapter8,chapter9,chapter10,chapter11,chapter12,chapter13,chapter14,chapter15,chapter16,chapter17,chapter18,chapter19,chapter20,chapter21,
+var chapterList = [chapter1,chapter2,chapter3,chapter4,chapter5,chapter6,chapter7,chapter8,chapter9,chapter10,chapter11,chapter12,chapter13,chapter14,chapter15,chapter16,chapter17,chapter18,chapter19,chapter20,chapter21,chapter22,
 				   yuhun1,yuhun2,yuhun3,yuhun4,yuhun5,yuhun6,yuhun7,yuhun8,yuhun9,yuhun10,
 				   ttggB,jtB,gnB,egB,eknB,hfzB,gshB,tsB,jydmB,yyhB,
 				   gnhyPF,yaodaoPF,hetongPF,yunvPF,huangchuanPF
