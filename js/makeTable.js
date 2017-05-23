@@ -15,6 +15,12 @@ var nameKey = {
 
 // 创建式神主函数
 function main(){
+	//---对数组中式神排序
+	SSR_List.sort();
+	SR_List.sort();
+	R_List.sort();
+	N_List.sort();
+
 
 	var ssrTemp = new Array();	// 存放所ssr有单元格
 	var ssrNameTemp = new Array();
@@ -25,6 +31,7 @@ function main(){
 	var nTemp = new Array();
 	var nNameTemp = new Array();
 	
+
 	for(var i=0; i<SSR_List.length; i++){
 		ssrTemp[ssrTemp.length] = creatImgTD("img\\ssr_img\\", SSR_List[i]);
 		ssrNameTemp[ssrNameTemp.length] = creatNameTD(nameKey[SSR_List[i]]);
