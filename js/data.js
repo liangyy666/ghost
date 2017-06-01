@@ -265,6 +265,17 @@ var chapter22 = {
 				" 青坊主2	般若×3 青坊主×1",
 				" 首领：络新妇	二口女×2 般若×1 酒吞×1;二回合 - 惠比寿×1 吸血姬×1 椒图×1 络新妇×1"]
 }
+var chapter23 = {
+	name : "第二十三章 沉睡的傀儡师",
+	ghost : [" 孟婆1	孟婆×1 山兔×3",
+			 " 孟婆2	孟婆×1 山兔×3",
+			 " 孟婆3	孟婆×1 山兔×3",
+			 " 盗墓小鬼1	座敷童子×2 河童×1 盗墓小鬼×1",
+			 " 盗墓小鬼2	座敷童子×2 河童×1 盗墓小鬼×1",
+			 " 骨女1	赤舌×3 骨女×1",
+			 " 骨女2	赤舌×3 骨女×1",
+			 " 首领：傀儡师	盗墓小鬼×3 傀儡师×1;回合二 萤草×3 傀儡师×1"]
+}
 
 //-------------------- 御魂 1~10层 --------------------------------------------------------------------
 var yuhun1 = {
@@ -471,7 +482,7 @@ var changeName = {
 
 
 // 存放所有章节
-var chapterList = [chapter1,chapter2,chapter3,chapter4,chapter5,chapter6,chapter7,chapter8,chapter9,chapter10,chapter11,chapter12,chapter13,chapter14,chapter15,chapter16,chapter17,chapter18,chapter19,chapter20,chapter21,chapter22,
+var chapterList = [chapter1,chapter2,chapter3,chapter4,chapter5,chapter6,chapter7,chapter8,chapter9,chapter10,chapter11,chapter12,chapter13,chapter14,chapter15,chapter16,chapter17,chapter18,chapter19,chapter20,chapter21,chapter22,chapter23,
 				   yuhun1,yuhun2,yuhun3,yuhun4,yuhun5,yuhun6,yuhun7,yuhun8,yuhun9,yuhun10,
 				   ttggB,jtB,gnB,egB,eknB,hfzB,gshB,tsB,jydmB,yyhB,
 				   gnhyPF,yaodaoPF,hetongPF,yunvPF,huangchuanPF

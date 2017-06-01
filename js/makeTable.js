@@ -170,15 +170,30 @@ function search(){
 		}
 	}
 	
+
 	var rightDiv = document.getElementById("right");
 	var showinfo = "搜索结果：<br/>";
-	for(var n=0;n<nameList.length;n++){
-		showinfo += "<span style=\"color:#ff0000;\">" + nameList[n] + "</span>"+ "<br/><br/>"
-		var listINFO = searchGhost(nameList[n]);
+	// if语句判断上面的查找是否有结果；
+	if(nameList.length>0){
+		// alert("列表大于0")
+		for(var n=0;n<nameList.length;n++){
+			showinfo += "<span style=\"color:#ff0000;\">" + nameList[n] + "</span>"+ "<br/><br/>"
+			var listINFO = searchGhost(nameList[n]);
+			for(var i=0;i<listINFO.length;i++){
+				showinfo += listINFO[i];
+			}
+		}
+	}
+	else{
+		// alert("列表小于0")
+		showinfo += "<span style=\"color:#ff0000;\">" + searchvalue + "</span>"+ "<br/><br/>"
+		var listINFO = searchGhost(searchvalue);
 		for(var i=0;i<listINFO.length;i++){
 			showinfo += listINFO[i];
 		}
 	}
+
+
 	
 	rightDiv.innerHTML = showinfo;
 	rightDiv.scrollIntoView();	// 转到显示结果
