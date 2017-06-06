@@ -436,6 +436,21 @@ var huangchuanPF = {
 				"第九层 <br/>一回合金鱼姬×1 古笼火×4 <br/>二回合荒川之主×1 夜叉×2 烟烟罗×4 <br/>三回合石距×1 <br/>",
 				"第十层 <br/>一回合金鱼姬×1 古笼火×5 <br/>二回合大天狗 夜叉×4 <br/>三回合桃花妖×1 青行灯×1 姑获鸟×1 惠比寿×1 荒川之主×1 <br/>"]
 }
+var fengbaozhidianPF = {
+	name : "风暴之巅",
+	ghost : [
+		"第一层 <br/>回合一帚神×4 <br/>回合二三尾狐×4 <br/>回合三首无×3 大天狗×1",
+		"第二层 <br/>回合一帚神×3 天邪鬼黄×1 <br/>回合二三尾狐×4 <br/>回合三狸猫×3 大天狗×1",
+		"第三层 <br/>回合一帚神×3 青蛙瓷器×1 <br/>回合二三尾狐×4 <br/>回合三山童×3 大天狗×1",
+		"第四层 <br/>回合一帚神×3 椒图×1 <br/>回合二三尾狐×4 <br/>回合三御行达摩×4 独眼小僧×1 大天狗×1",
+		"第五层 <br/>回合一帚神×3 椒图×1 <br/>回合二三尾狐×3 赤舌×1 <br/>回合三鸦天狗×4 雪女×1 大天狗×1",
+		"第六层 <br/>回合一帚神×3 金鱼姬×1 <br/>回合二三尾狐×3 赤舌×1 <br/>回合三清姬×2 鬼使白×2 跳跳弟弟×1 大天狗×1",
+		"第七层 <br/>回合一帚神×3 金鱼姬×1 <br/>回合二夜叉×5 镰鼬×1 <br/>回合三萤草×4 雨女×1 大天狗×1",
+		"第八层 <br/>回合一帚神×3 童男×1 <br/>回合二妖狐×5 大天狗×1 <br/>回合三桃花妖×5 大天狗×1",
+		"第九层 <br/>回合一帚神×3 童男×1 <br/>回合二酒吞童子×1 三尾狐×2 大天狗×1 <br/>回合三雪女×1 大天狗×1 黑晴明×1",
+		"第十层 <br/>回合一帚神×3 武士之灵×1 <br/>回合二吸血姬×5 椒图×1 <br/>回合三雪女×1 大天狗×1 黑晴明×1"
+	]
+}
 
 //------------------------- 神秘线索 --------------------
 var changeName = {
@@ -485,7 +500,7 @@ var changeName = {
 var chapterList = [chapter1,chapter2,chapter3,chapter4,chapter5,chapter6,chapter7,chapter8,chapter9,chapter10,chapter11,chapter12,chapter13,chapter14,chapter15,chapter16,chapter17,chapter18,chapter19,chapter20,chapter21,chapter22,chapter23,
 				   yuhun1,yuhun2,yuhun3,yuhun4,yuhun5,yuhun6,yuhun7,yuhun8,yuhun9,yuhun10,
 				   ttggB,jtB,gnB,egB,eknB,hfzB,gshB,tsB,jydmB,yyhB,
-				   gnhyPF,yaodaoPF,hetongPF,yunvPF,huangchuanPF
+				   gnhyPF,yaodaoPF,hetongPF,yunvPF,huangchuanPF,fengbaozhidianPF
 				   
 ];
 
