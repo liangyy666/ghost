@@ -234,11 +234,5 @@ function changeColor(name, instring){
 	return tempStr;
 	
 }
-
-
-// 跳转函数
-$('#totop').click(function(){$('html,body').animate({scrollTop: $('span').offset().top},1000);return false;});
-
-
 //------------------------------------------------------------------------------------
 main();
