@@ -59,7 +59,7 @@ function main(){
 	document.getElementById("sr_div").style.display="none";//隐藏
 	document.getElementById("r_div").style.display="none";//隐藏
 	document.getElementById("n_div").style.display="none";//隐藏
-	
+	document.getElementById("search_div").style.display="none";//隐藏
 	// 设置图片宽度
 
 	
@@ -146,9 +146,9 @@ function creatTable(name, imgList, nameList){
 
 
 
-// 显示点击的式神(SSR,SR,R,N 四个按钮)
+// 导航栏
 function showme(name){
-	var nameList = ["ssr_div", "sr_div", "r_div", "n_div"]
+	var nameList = ["search_div", "ssr_div", "sr_div", "r_div", "n_div"]
 	for(var i=0; i<nameList.length; i++){
 		if(nameList[i] != name){
 			var div = document.getElementById(nameList[i]).style.display="none";
