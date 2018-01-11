@@ -101,7 +101,7 @@ function creatImgTD(addr, name){
 			rightDiv.innerHTML = showinfo;
 		}
 			
-
+        rightDiv.style.display="block";
 	};
 	
 	var img = document.createElement("img");
@@ -148,7 +148,7 @@ function creatTable(name, imgList, nameList){
 
 // 导航栏
 function showme(name){
-	var nameList = ["search_div", "ssr_div", "sr_div", "r_div", "n_div"]
+	var nameList = ["search_div", "ssr_div", "sr_div", "r_div", "n_div", "right"]
 	for(var i=0; i<nameList.length; i++){
 		if(nameList[i] != name){
 			var div = document.getElementById(nameList[i]).style.display="none";
@@ -194,7 +194,7 @@ function search(){
 	}
 
 
-	
+	document.getElementById("right").style.display="block";
 	rightDiv.innerHTML = showinfo;
 	rightDiv.scrollIntoView();	// 转到显示结果
 	
