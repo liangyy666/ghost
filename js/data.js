@@ -545,6 +545,22 @@ var haiguaidewenrouPF = {
 	]
 }
 
+var qingdengbaiwuyuPF = {
+	name : "青灯百物语",
+	ghost : [
+        "第一层 <br/>回合一跳跳犬×3 赤舌×1 <br/>回合二涂壁×3 寄生魂×1 <br/>回合三灯笼鬼×3 青行灯×1",
+        "第二层 <br/>回合一唐纸伞妖×3 提灯小鬼×1 <br/>回合二帚神×3 鸦天狗×1 <br/>回合三狸猫×2 巫蛊师×1 青行灯×1",
+        "第三层 <br/>回合一赤舌×3 三尾狐×1 <br/>回合二童男×3 童女×1 <br/>回合三古笼火×2 数珠×1 青行灯×1",
+        "第四层 <br/>回合一天邪鬼黄×3 食发鬼×1 <br/>回合二天邪鬼青×2 丑时之女×1 兵俑×1 <br/>回合三觉×4 青行灯×1",
+        "第五层 <br/>回合一提灯小僧×3 跳跳弟弟×1 <br/>回合二天邪鬼绿×2 饿鬼×2 独眼小僧×1 <br/>回合三青蛙瓷器×2 蝴蝶精×2 青行灯×1",
+        "第六层 <br/>回合一跳跳哥哥×3 首无×1 <br/>回合二古笼火×2 管狐×1 山童×1 <br/>回合三兔丸×3 鲤鱼精×2 青行灯×1",
+        "第七层 <br/>回合一觉×2 山兔×2 萤草×1 <br/>回合二首无×2 山童×2 椒图×1 <br/>回合三青坊主×2 妖琴师×2 姑获鸟×1 青行灯×1",
+        "第八层 <br/>回合一古笼火×2 鬼使黑×1 鬼使白×1 书翁×1 <br/>回合二食梦貘×1 白狼×1 桃花妖×1 二口女×1 镰鼬×1 万年竹×1 <br/>回合三日和坊×1 姑获鸟×1 鸩×1 白童子×1 两面佛×1 青行灯×1",
+        "第九层 <br/>回合一山童×2 惠比寿×1 万年竹×1 孟婆×1 小松丸×1 <br/>回合二金鱼姬×1 凤凰火×1 雨女×1 烟烟罗×1 青坊主×1 妖狐×1 <br/>回合三日和坊×1 百目鬼×1 般若×1 椒图×1 大天狗×1 青行灯×1",
+        "第十层 <br/>回合一食发鬼×1 蝴蝶精×1 孟婆×1 吸血姬×1 骨女×1 犬神×1 <br/>回合二清姬×1 以津真天×1 妖琴师×1 丑时之女×1 青坊主×1 金鱼姬×1 <br/>回合三日和坊×1 般若×1 荒×1 椒图×1 大天狗子×1 青行灯×1"
+	]
+}
+
 //------------------------- 神秘线索 --------------------
 var changeName = {
 	"童女":"翅膀 羽衣 幼女",
@@ -593,7 +609,7 @@ var changeName = {
 var chapterList = [chapter1,chapter2,chapter3,chapter4,chapter5,chapter6,chapter7,chapter8,chapter9,chapter10,chapter11,chapter12,chapter13,chapter14,chapter15,chapter16,chapter17,chapter18,chapter19,chapter20,chapter21,chapter22,chapter23,chapter24,
 				   yuhun1,yuhun2,yuhun3,yuhun4,yuhun5,yuhun6,yuhun7,yuhun8,yuhun9,yuhun10,
 				   ttggB,jtB,gnB,egB,eknB,hfzB,gshB,tsB,jydmB,yyhB,xswB,
-				   gnhyPF,yaodaoPF,hetongPF,yunvPF,huangchuanPF,fengbaozhidianPF,sanjiandeshouhuPF,xiazhifengwushiPF,yizhidejuexingPF,haiguaidewenrouPF,shantudabaozouPF
+				   gnhyPF,yaodaoPF,hetongPF,yunvPF,huangchuanPF,fengbaozhidianPF,sanjiandeshouhuPF,xiazhifengwushiPF,yizhidejuexingPF,haiguaidewenrouPF,shantudabaozouPF,qingdengbaiwuyuPF
 				   
 ];
 
